@@ -1,0 +1,14 @@
+
+
+<!-- task_tracker/create_module.html -->
+{% extends "base_generic.html" %}
+{% block content %}
+<div class="container mt-5">
+    <h2>Create Module for Project: {{ project.name }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Save Module</button>
+    </form>
+</div>
+{% endblock %}

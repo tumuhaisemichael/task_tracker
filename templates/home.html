@@ -1,0 +1,15 @@
+
+
+
+<!-- welcome.html -->
+{% extends "base_generic.html" %}
+{% block content %}
+<div class="welcome-container">
+    <h2>Welcome to Task Tracker</h2>
+    <p>This is the welcome page.</p>
+    <p>
+        <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+        <a href="{% url 'register' %}" class="btn btn-secondary">Register</a>
+    </p>
+</div>
+{% endblock %}

@@ -1,0 +1,46 @@
+<!-- base_generic.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Task Tracker{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .welcome-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .welcome-container h2 {
+            margin-bottom: 20px;
+            color: #343a40;
+        }
+        .welcome-container p {
+            margin-bottom: 20px;
+        }
+        .welcome-container a {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-dark text-white p-3 text-center">
+        <h1>Task Tracker</h1>
+    </header>
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+        <p>&copy; 2024 Task Tracker</p>
+    </footer>
+</body>
+</html>
