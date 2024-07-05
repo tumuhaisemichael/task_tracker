@@ -1,12 +1,26 @@
+# from django import forms
+# from .models import Project, Module
+
+# class ProjectForm(forms.ModelForm):
+#     class Meta:
+#         model = Project
+#         fields = ['name', 'description', 'contributors']
+
+# class ModuleForm(forms.ModelForm):
+#     class Meta:
+#         model = Module
+#         fields = ['project', 'name', 'description', 'estimated_time']
+
+# forms.py
 from django import forms
-from .models import Project, Module
+from .models import Project, Segment
 
 class ProjectForm(forms.ModelForm):
     class Meta:
         model = Project
-        fields = ['name', 'description', 'contributors']
+        fields = ['name', 'description', 'time_to_finish']
 
-class ModuleForm(forms.ModelForm):
+class SegmentForm(forms.ModelForm):
     class Meta:
-        model = Module
-        fields = ['project', 'name', 'description', 'estimated_time']
+        model = Segment
+        fields = ['name', 'description', 'time_to_finish']
