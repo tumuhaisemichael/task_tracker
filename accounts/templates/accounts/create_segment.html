@@ -1,5 +1,3 @@
-
-
 <!-- task_tracker/create_module.html -->
 {% extends "base_generic.html" %}
 {% block content %}
@@ -8,7 +6,9 @@
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Save Module</button>
+        <!-- <button type="submit" class="btn btn-primary">Save Module</button> -->
+        <button type="submit" name="add_another">Save and Add Module</button>
+        <button type="submit" name="finish">Finish</button>
     </form>
 </div>
 {% endblock %}

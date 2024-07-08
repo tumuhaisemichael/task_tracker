@@ -33,14 +33,11 @@ urlpatterns = [
     path('', accounts_views.home, name='home'),
     path('welcome/', accounts_views.welcome, name='welcome'),  # Add this line for the welcome page
     path('logout/', accounts_views.user_logout, name='logout'),
-        # URL for creating a new project
-    # path('create_project/', accounts_views.create_project, name='create_project'),
-
-    # # URL for creating a new module
-    # # path('create_module/', accounts_views.create_module, name='create_module'),
-    # path('create_module/<int:project_id>/', accounts_views.create_module, name='create_module'),
     path('create_project/', accounts_views.create_project, name='create_project'),
     path('create_segment/<int:project_id>/', accounts_views.create_segment, name='create_segment'),
+     path('project/<int:project_id>/', accounts_views.project_detail, name='project_detail'),
+    path('create_segment/<int:project_id>/', accounts_views.create_segment, name='create_segment'),
+    
 
 
 ]
