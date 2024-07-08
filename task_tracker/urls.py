@@ -35,8 +35,8 @@ urlpatterns = [
     path('logout/', accounts_views.user_logout, name='logout'),
     path('create_project/', accounts_views.create_project, name='create_project'),
     path('create_segment/<int:project_id>/', accounts_views.create_segment, name='create_segment'),
-     path('project/<int:project_id>/', accounts_views.project_detail, name='project_detail'),
-    path('create_segment/<int:project_id>/', accounts_views.create_segment, name='create_segment'),
+    path('project/<int:project_id>/', accounts_views.project_detail, name='project_detail'),
+    # path('create_segment/<int:project_id>/', accounts_views.create_segment, name='create_segment'),
     
 
 
